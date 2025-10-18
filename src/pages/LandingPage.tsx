@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -41,12 +42,16 @@ export default function LandingPage() {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="text-text-secondary hover:text-text-primary">
-              Sign In
-            </Button>
-            <Button className="btn-primary">
-              Get Started
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" className="text-text-secondary hover:text-text-primary">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button className="btn-primary">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -71,13 +76,17 @@ export default function LandingPage() {
               Streamline lead qualification, proposal generation, project setup, and billing—all with built-in AI copilots.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-primary text-lg px-8 py-6">
-                Book AI Intake
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-borders-strong text-text-primary hover:bg-surface-elevated">
-                Request Demo
-              </Button>
+              <Link to="/intake">
+                <Button size="lg" className="btn-primary text-lg px-8 py-6">
+                  Book AI Intake
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-borders-strong text-text-primary hover:bg-surface-elevated">
+                  Request Demo
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -170,10 +179,12 @@ export default function LandingPage() {
             <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
               Join hundreds of AI development agencies already using Autopilot Studio to streamline their operations.
             </p>
-            <Button size="lg" className="btn-primary text-lg px-8 py-6">
-              Start Your Free Trial
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to="/signup">
+              <Button size="lg" className="btn-primary text-lg px-8 py-6">
+                Start Your Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

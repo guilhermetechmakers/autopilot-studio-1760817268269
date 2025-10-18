@@ -5,8 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 // Pages
 import LandingPage from "@/pages/LandingPage";
-import LoginPage from "@/pages/auth/LoginPage";
-import SignupPage from "@/pages/auth/SignupPage";
+import AuthPage from "@/pages/auth/AuthPage";
 import PasswordResetPage from "@/pages/auth/PasswordResetPage";
 import EmailVerificationPage from "@/pages/auth/EmailVerificationPage";
 import DashboardPage from "@/pages/dashboard/DashboardPage";
@@ -55,8 +54,8 @@ function App() {
             <Routes>
               {/* Public Routes */}
               <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/login" element={<AuthPage />} />
+              <Route path="/signup" element={<AuthPage />} />
               <Route path="/password-reset" element={<PasswordResetPage />} />
               <Route path="/email-verification" element={<EmailVerificationPage />} />
               
